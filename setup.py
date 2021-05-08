@@ -28,8 +28,7 @@ from glob import glob
 from os.path import basename
 from os.path import splitext
 
-from setuptools import find_packages
-from setuptools import setup
+from setuptools import find_packages, setup
 
 setup(
     name='keri',
@@ -80,6 +79,7 @@ setup(
         'multidict>=5.1.0',
         'orderedset>=2.0.3',
         'hio>=0.3.6',
+        'multicommand>=0.0.8',
 
     ],
     extras_require={
@@ -94,6 +94,8 @@ setup(
             'keri_bob = keri.demo.demo_bob:main',
             'keri_eve = keri.demo.demo_eve:main',
             'keri_sam = keri.demo.demo_sam:main',
+            'wallet = keri.cli.wallet.cli:main',
+            'agent = keri.cli.agent.cli:main',
         ]
     },
 )

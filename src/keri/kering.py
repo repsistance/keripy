@@ -2,14 +2,13 @@
 """
 Generic Constants and Classes
 """
-import sys
 from collections import namedtuple
 
 Versionage = namedtuple("Versionage", "major minor")
 
 Version = Versionage(major=1, minor=0)  # KERI Protocol Version
 
-SEPARATOR =  "\r\n\r\n"
+SEPARATOR = "\r\n\r\n"
 SEPARATOR_BYTES = SEPARATOR.encode("utf-8")
 
 
@@ -176,6 +175,7 @@ class UnverifiedTransferableReceiptError(ValidationError):
         raise UnverifiedTransferableReceiptError("error message")
     """
 
+
 class DerivationError(ValidationError):
     """
     Derivation related errors
@@ -276,4 +276,3 @@ class UnexpectedOpCodeError(DerivationCodeError):
     Usage:
         raise DerivationCodeError("error message")
     """
-
