@@ -80,6 +80,7 @@ setup(
         'orderedset>=2.0.3',
         'hio>=0.3.6',
         'multicommand>=0.0.8',
+        'docopt>=0.6.2',
 
     ],
     extras_require={

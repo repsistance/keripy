@@ -54,6 +54,7 @@ class Wallet:
     def list_identifiers(self):
         d = shelve.open(self.store)
         ids = list(itertools.takewhile(lambda i: i.startswith('id_'), iter(d)))
+        ids = list(map(lambda i: i.removeprefix('id_'), ids))
         d.close()
 
         return ids
